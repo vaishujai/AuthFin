@@ -24,7 +24,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header"><a class="btn btn-primary float-left"
