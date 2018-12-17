@@ -32,4 +32,5 @@ Route::resources([
     'questions' => 'QuestionController',
 ]);
 
-Route::get('/user/activation/{token}', 'Auth\RegisterController@userActivation');
+//Route::get('/user/activation/{token}', 'Auth\RegisterController@userActivation');
+Auth::routes(['verify' => true]);

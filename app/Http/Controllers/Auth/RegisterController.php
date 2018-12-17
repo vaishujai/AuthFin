@@ -46,7 +46,7 @@ class RegisterController extends Controller
     /**
      * Get a validator for an incoming registration request.
      *
-     * @param  array  $data
+     * @param  array $data
      * @return IlluminateContractsValidationValidator
      */
     protected function validator(array $data)
@@ -61,18 +61,19 @@ class RegisterController extends Controller
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array  $data
+     * @param  array $data
      * @return User
      */
     protected function create(array $data)
     {
         return User::create([
-          //  'name' => $data['name'],
+            //  'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
     }
-    public function register(Request $request) {
+}
+  /*  public function register(Request $request) {
         $input = $request->all();
         $validator = $this->validator($input);
 
@@ -108,4 +109,4 @@ class RegisterController extends Controller
         }
         return redirect()->to('login')->with('Warning',"your token is invalid");
     }
-}
+} */

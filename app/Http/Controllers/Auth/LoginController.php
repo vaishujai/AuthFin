@@ -39,7 +39,7 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    public function authenticated(Request $request, $user)
+  /*  public function authenticated(Request $request, $user)
     {
         if ($user->is_activated ==0){
             auth()->logout();
@@ -47,5 +47,5 @@ class LoginController extends Controller
 
         }
     }
-
+*/
 }
