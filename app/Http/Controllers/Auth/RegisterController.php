@@ -76,7 +76,7 @@ class RegisterController extends Controller
         $input = $request->all();
         $validator = $this->validator($input);
 
-        if ($validator->passes()){
+     //   if ($validator->passes()){
             $user = $this->create($input)->toArray();
             $user['link'] = str_random(30);
 
@@ -89,8 +89,8 @@ class RegisterController extends Controller
             Mail::to($user['email'])->send(new CheckMailable($user));
 
             return redirect()->to('login')->with('message',"We sent activation code. Please check your mail.");
-        }
-        return back()->with('errors',$validator->errors());
+      //  }
+       // return back()->with('errors',$validator->errors());
     }
 
     public function userActivation($token){
