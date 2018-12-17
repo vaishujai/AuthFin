@@ -33,3 +33,4 @@ Route::resources([
 ]);
 
 //Route::get('/user/activation/{token}', 'Auth\RegisterController@userActivation');
+Auth::routes(['verify' => true]);
